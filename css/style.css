@@ -1,0 +1,179 @@
+body{
+    margin: 0; padding: 0;
+}
+h1{ color: #ff4757; font-family: 'Anton', sans-serif;
+    border-left: 8px solid #c0392b;
+    padding-left: 10px;
+}
+h3{ font-family: 'Montserrat', sans-serif; }
+h5{ font-family: 'Montserrat', sans-serif; }
+
+input[type="text"]{
+    border: 1px solid grey;
+    padding: 5px 10px;
+}
+
+.checked {
+    color: orange;
+}
+
+button{
+    border: 1px solid grey;
+    padding: 5px 10px;
+    margin-left: 5px; background-color: #ff4757;
+    color: white;
+}
+
+#intro{
+    margin-top: 10%;
+    animation-name: intr;
+    animation-direction: alternate;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}
+@keyframes intr{
+    from{ transform: scale(0) rotateY(180deg);  }
+    to{ transform: scale(1) rotateY(360deg); }
+}
+
+.marvelquestion{
+    margin: auto; width: 50%; padding-top: 100px; }
+        
+select{ width: 100%; padding: 5vh; 
+            overflow: hidden; opacity: 0.8; }
+        
+option{ margin-top: 5px; border-left: 5px solid brown; font-family: 'PT Sans', sans-serif;
+                font-size: 1.5em; color:#2c3e50;}
+option{ padding: 3vh; text-align: center;}
+
+.animate{
+    animation-name: ani;
+     animation-duration: 2s;
+     animation-direction: alternate;
+     animation-iteration-count: 1;
+}
+@keyframes ani{
+    0%{
+     transform:rotateY(360deg);
+    }
+    100%{
+        transform:rotateY(0);
+    }
+}
+
+.next{ width: 15%;  height: 5vh; float: right;
+        margin:10px;}
+
+.score{ width: 15%;  height: 5vh; float: right;
+        margin:10px;}
+
+footer{
+    background-color: red;
+    color: white;
+    padding: 3%;
+    margin-top: 30vh;
+}
+
+
+div {
+	clear: both;
+	margin: 0;
+}
+
+label {
+  width: 200px;
+  border-radius: 3px;
+  border: 1px solid #D1D3D4;
+}
+
+/* hide input */
+input.radio:empty {
+	margin-left: -999px;
+}
+
+/* style label */
+input.radio:empty ~ label {
+	position: relative;
+    width: 500px;
+	float: left;
+	line-height: 2.5em;
+	text-indent: 3.25em;
+	margin-top:1.5em;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+input.radio:empty ~ label:before {
+	position: absolute;
+	display: block;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	content: '';
+	width: 2.5em;
+	background: #D1D3D4;
+	border-radius: 3px 0 0 3px;
+}
+
+/* toggle hover */
+input.radio:hover:not(:checked) ~ label:before {
+	content:url('reactor.png');
+	 padding-top: .3em;
+	text-indent: .4em;
+	color: #C2C2C2;
+}
+
+input.radio:hover:not(:checked) ~ label {
+	color: #888;
+}
+
+/* toggle on */
+input.radio:checked ~ label:before {
+	content:url('reactor.png');
+    padding-top: .3em;
+	text-indent: .4em;
+	color: #9CE2AE;
+	background-color: #e74c3c;
+}
+
+input.radio:checked ~ label {
+	color: #777;
+}
+
+/* radio focus */
+input.radio:focus ~ label:before {
+	box-shadow: 0 0 0 3px #999;
+}
+
+@media(max-width: 767.98px) { 
+    
+    /* style label */
+input.radio:empty ~ label {
+	position: relative;
+    width: 200px;
+	float: left;
+	line-height: 2.5em;
+	text-indent: 3.25em;
+	margin-top:1.5em;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+    
+    h3{ font-size: 1.4em; }
+select{ width: 100%; padding: 1vh; 
+            overflow: hidden; opacity: 0.8; }
+        
+option{ margin-top: 3px; border-left: 5px solid brown; font-family: 'PT Sans', sans-serif; width: 100%;
+                font-size: 1em; color:#2c3e50;}
+option{ padding: 2vh; text-align: center;}
+    .next{ width: 30%;  height: 5vh; float: right;
+        margin:15px;}
+
+}
